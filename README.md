@@ -6,7 +6,7 @@
     - [Dependencies](#dependencies)
     - [Installing](#installing)
     - [Setting Up](#setting-up)
-    - [Preparing Sheets and Code] (#preparing-the-sheets-and-code)
+    - [Preparing Sheets and Code](#preparing-the-sheets-and-code)
     - [Executing](#executing)
 - [Author](#author)
 - [License](#license)
@@ -19,14 +19,15 @@ This is a simple inventory manager program using the Tkinter package for Python 
 - Editing cell values
 - Adding/Deleting Columns 
 - Selecting/Displaying Columns 
+- Creating a backup "OLD" worksheet just incase a manual revert is required
 
 > **Note:** Project was made to be used for a school organization called GAMA for  organizing sheet music, hence the name of the python file and variable names. 
 
-Shown below is the screen which appears when the program is run and a column is selected from thedropdown menu. <br />
-<img src="Screenshots/titlescreen.png" width="200">
+Shown below is the screen which appears when the program is run and a column is selected from the dropdown menu. <br />
+<img src="Screenshots/titlescreen.png" width="250">
 
 Below is the dialogue which is displayed when a value/instruument in the treeview grid is selected. <br />
-<img src="Screenshots/instrument-selected.png" width="300">
+<img src="Screenshots/instrument-selected.png" width="150">
 
 
 Below is the dialogue which is displayed when the "Edit Columns" button is selected. <br /> 
@@ -63,7 +64,10 @@ This code will not run without following the set up process stated below. As thi
 
 1. Head over to [Google Developer Console](https://console.developers.google.com/cloud-resource-manager) and create a new project (leave the "Location" box as is) or select an already existing one 
 2. In the box labeled “Search for APIs and Services”, search for “Google Drive API” and "Google Sheets API" and enable them both. ***Make sure the correct project is selected on the top left, beside the "Google APIs" logo***  
-3. Now, click on the "APIs & Services" text located on top of the name of the API. Look at the image below as a reference <img src="Screenshots\APIs-&-services-text.png" width="200">
+3. Now, click on the "APIs & Services" text located on top of the name of the API. Look at the image below as a reference 
+
+<img src="Screenshots\APIs-&-services-text.png" width="200">
+
 4. Then, click on the "Credentials" tab on the left sidebar, press "Create Credentials" and select "Service Account"
 5. Enter a name of your choice, and add a description and then press create
 6. Select the role of Editor under the Project category, then press continue, and then done.  
@@ -76,7 +80,13 @@ This code will not run without following the set up process stated below. As thi
 
 ### Preparing the Sheets and Code
 
-Before executing, you must 
+Before executing, you must change either change your spreadsheet and worksheet name to match the program , or change the program to match your spreadsheet and worksheet names. Let's do the latter. 
+Firstly, on Google Sheets, share the document with the "client_email" given in the json file which you just downloaded. 
+
+1. On line 17 of Gama_Inventory.py, change the text to the name of your spreadsheet (remove the <> aswell)
+2. On line 18, change the text to the name of the worksheet, which is the name of the tab of the sheet on the bottom of google sheets page. 
+
+If wanted, go through the code and change the text lables to youe liking, instead of GAMA, or Instruments, etc. 
 
 
 <br />

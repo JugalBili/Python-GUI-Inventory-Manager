@@ -14,8 +14,8 @@ creds  = ServiceAccountCredentials.from_json_keyfile_name("creds.json", scope)
 client = gspread.authorize(creds)
 
 # opens sheets 
-spreadsheet = client.open("test gama")
-sheet = spreadsheet.worksheet("Sheet1")
+spreadsheet = client.open("<Enter File Name Here>")
+sheet = spreadsheet.worksheet("<Enter File Name Here>")
 try: 
     old_sheet = spreadsheet.worksheet("OLD")
     spreadsheet.del_worksheet(old_sheet)
